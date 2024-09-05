@@ -38,8 +38,12 @@ def main():
     parser.add_argument('--fecha_final', type=str, nargs='+',help='Fecha de inicio para el reporte: ddmmyyyy')
     args = parser.parse_args()
 
-    fecha_inicial: datetime = datetime(int(args.fecha_inicial[0][4:8]), int(args.fecha_inicial[0][2:4]), int(args.fecha_inicial[0][0:2]))
-    fecha_final: datetime = datetime(int(args.fecha_final[0][4:8]), int(args.fecha_final[0][2:4]), int(args.fecha_final[0][0:2]))
+    if (args.fecha_inicial is not None and args.fecha_final is not None):
+        fecha_inicial: datetime = datetime(int(args.fecha_inicial[0][4:8]), int(args.fecha_inicial[0][2:4]), int(args.fecha_inicial[0][0:2]))
+        fecha_final: datetime = datetime(int(args.fecha_final[0][4:8]), int(args.fecha_final[0][2:4]), int(args.fecha_final[0][0:2]))
+    else:
+        print("Por favor proporcione una fecha inicial y una final para comenzar.")
+        sys.exit()
 
     ### descargar excel
 
