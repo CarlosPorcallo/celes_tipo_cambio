@@ -1,12 +1,12 @@
 import os
 
-URL_SITIO: str = "https://www.banxico.org.mx/tipcamb/tipCamMIAction.do?idioma=sp"
+URL_SITIO: str = "<url_sitio_banxico>"
 WAIT: int = 40
 
 FILENAME_TIPO_CAMBIO: str = "tipoCambio.xls"
 FILENAME_NOMINA_ESPEJO: str = "nominaEspejo.xlsx"
 
-DWN_DIR: str = "/Users/chuck/Downloads"
+DWN_DIR: str = "</path/to/downloads>"
 TMP_DIR: str = f"{os.getcwd()}/tmp"
 OUTPUT_DIR: str = f"{os.getcwd()}/output"
 
